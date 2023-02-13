@@ -6,11 +6,24 @@
 body{
     background-color: #e5e5e5;
     font-family: 'AvenirNextLTPro-Regular';
-    max-width:1440px;
 }
-.fixed-frame{
+
+.main-page-container{
+    max-width: 1440px;
+    margin-left: 140px;
+}
+
+/* .fixed-frame{
     display:grid;
     grid-template-columns: 1fr 1fr;
+} */
+
+.fixed-frame{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    column-gap: 48px;
 }
 
 .logotype{
@@ -48,25 +61,34 @@ body{
 }
 
 .list-item{
-    display:inline-flex;
+    display:inline-block;
     list-style:none;
     font-size:16px;
     margin-top:64px;
+    justify-content: flex-end;
 }
 
 .link-to{
     text-decoration:none;
     color: #333333;
     font-weight:500;
+    
 }
 
-.register{
+.button-register{
     text-transform:uppercase;
+    text-decoration:none;
     color: #fefefe;
     padding:10px 15px 10px 15px;
     border-radius:3px;
-    background: linear-gradient(#647B64, #66AC66);
-    
+    background: linear-gradient(#647B64, #66AC66); 
+}
+
+.button-register:hover{
+background: linear-gradient(102.3deg, #0BB1E3 -4.62%, #0F2976 178.22%),
+linear-gradient(0deg, #0E70AF, #0E70AF),
+linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+
 }
 
 h2{
@@ -106,6 +128,13 @@ h2{
 
 .register.get-started{
     position:absolute;
+    text-decoration:none;
+    text-transform: uppercase;
+    color:#fefefe;
+    width:350px;
+    height:73px;
+    background:linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+    border-radius: 5px;
 }
 
 .picture-behind-page{
